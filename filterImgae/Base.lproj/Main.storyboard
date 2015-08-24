@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="PfT-2j-PU0">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="gKI-2X-Moc">
+            <objects>
+                <viewController id="PfT-2j-PU0" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cBi-cW-BVZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="8fB-ZJ-4sT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Vd-CA-e1Z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="www" translatesAutoresizingMaskIntoConstraints="NO" id="w33-n6-TXs">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="419"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opC-Zn-lL7">
+                                <rect key="frame" x="18" y="474" width="284" height="31"/>
+                                <connections>
+                                    <action selector="filter:" destination="PfT-2j-PU0" eventType="valueChanged" id="Ub2-f2-Nd9"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="w33-n6-TXs" secondAttribute="trailing" constant="-16" id="Pkk-ep-Nz4"/>
+                            <constraint firstItem="w33-n6-TXs" firstAttribute="leading" secondItem="4Vd-CA-e1Z" secondAttribute="leadingMargin" constant="-16" id="SRw-Az-v6e"/>
+                            <constraint firstItem="w33-n6-TXs" firstAttribute="top" secondItem="4Vd-CA-e1Z" secondAttribute="topMargin" id="iRk-HT-n1J"/>
+                            <constraint firstItem="8fB-ZJ-4sT" firstAttribute="top" secondItem="w33-n6-TXs" secondAttribute="bottom" constant="149" id="jS6-t9-54n"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="w33-n6-TXs" id="ANd-8c-9hd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nYo-Hg-dZG" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130" y="289"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="www" width="320" height="317"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
